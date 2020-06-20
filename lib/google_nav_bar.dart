@@ -255,7 +255,7 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
       expandController.forward();
 
     return InkWell(
-      customBorder: CircleBorder(),
+      //customBorder: CircleBorder(),
       onTap: () {
         widget.onPressed();
       },
