@@ -172,6 +172,9 @@ class _GButtonState extends State<GButton> {
         widget.text,
         style: widget.textStyle ??
             TextStyle(fontWeight: FontWeight.w600, color: widget.textColor),
+
+        softWrap: false,
+        overflow: TextOverflow.fade,
       ),
     );
   }
@@ -251,8 +254,8 @@ class _ButtonState extends State<Button> with TickerProviderStateMixin {
     else
       expandController.forward();
 
-    return GestureDetector(
-      behavior: HitTestBehavior.translucent,
+    return InkWell(
+      customBorder: CircleBorder(),
       onTap: () {
         widget.onPressed();
       },
